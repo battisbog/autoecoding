@@ -6,9 +6,9 @@ import pandas as pd
 
 with open("/Users/shishirbarai/Desktop/Gmsh-TF/Gmsh-test-1.geo", "r") as f:
      data = f.readlines()
-     parsed_data = []
-for line in data:
-     parsed_data.append(data)
+#     parsed_data = []
+#for line in data:
+#     parsed_data.append(data)
       
-matrix = np.array(parsed_data)
-parsed_data
+matrix = np.array(data)
+data
