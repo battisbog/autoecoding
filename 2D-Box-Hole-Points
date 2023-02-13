@@ -1,0 +1,44 @@
+import matplotlib.pyplot as plt
+import random
+from matplotlib.patches import Circle
+import numpy as np
+
+#Define the 2D Box, Points inside the box and the circle
+
+def draw_square(x, y, side_length):
+    x_points = [x, x + side_length, x + side_length, x, x]
+    y_points = [y, y, y + side_length, y + side_length, y]
+    plt.plot(x_points, y_points, color='black')
+
+def draw_points(x, y, side_length, distance_x, distance_y):
+    center_x = x + side_length / 2
+    center_y = y + side_length / 2
+    num_points_x = int(side_length / distance_x)
+    num_points_y = int(side_length / distance_y)
+    for i in range(-num_points_x//2, num_points_x//2 + 1):
+        for j in range(-num_points_y//2, num_points_y//2 + 1):
+            point_x = center_x + i * distance_x
+            point_y = center_y + j * distance_y
+            if point_x >= x and point_x <= x + side_length and point_y >= y and point_y <= y + side_length:
+                plt.scatter(point_x, point_y, color='black',s=8)
+                
+
+
+def draw_circle(center_x, center_y, radius):
+    circle = Circle((center_x, center_y), radius, fill=False, color='black')
+    plt.gca().add_artist(circle)
+
+# Draw a square with bottom-left corner at (0, 0) and side length 1
+draw_square(0, 0, 1)
+
+# Draw uniformly spaced points inside the square
+distance_x = 0.12
+distance_y = 0.12
+draw_points(0, 0, 1, distance_x, distance_y)
+
+# Draw a circle with center at (0.5, 0.5) and radius 0.25
+draw_circle(0.5, 0.5, 0.25)
+
+plt.gca().set_aspect('equal')
+plt.axis('off')
+plt.show()
