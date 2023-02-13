@@ -42,3 +42,31 @@ draw_circle(0.5, 0.5, 0.25)
 plt.gca().set_aspect('equal')
 plt.axis('off')
 plt.show()
+
+
+# Constants
+start_x = 0
+end_x = 1
+start_y = 0
+end_y = 1
+center_x = 0.5
+center_y = 0.5
+radius = 0.25
+
+# Initialize variables
+points = []
+coordinates_A = []
+coordinates_B = []
+
+# Loop through all the points
+for x_coord in np.arange(start_x, end_x, distance_x):
+    for y_coord in np.arange(start_y, end_y, distance_y):
+        if (x_coord - center_x)**2 + (y_coord - center_y)**2 <= radius**2:
+            coordinates_A.append((x_coord, y_coord))
+        else:
+            coordinates_B.append((x_coord, y_coord))
+        points.append((x_coord, y_coord))
+
+# Print the values
+print("Coordinates of A:", coordinates_A)
+print("Coordinates of B:", coordinates_B)
