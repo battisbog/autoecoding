@@ -68,5 +68,7 @@ for x_coord in np.arange(start_x, end_x, distance_x):
         points.append((x_coord, y_coord))
 
 # Print the values
-print("Coordinates of A:", coordinates_A)
-print("Coordinates of B:", coordinates_B)
+# print("Coordinates of A:", coordinates_A)
+# print("Coordinates of B:", coordinates_B)
+print(coordinates_A)
+print(len(coordinates_A))
