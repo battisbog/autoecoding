@@ -18,7 +18,7 @@ for row in data:
         matrix.append(row)
 
 df = pd.DataFrame(matrix)
-df.rename(columns = {0:'identifier'}, 
+df.rename(columns = {0:'identifier'},
             inplace = True)
 
 print(df)
