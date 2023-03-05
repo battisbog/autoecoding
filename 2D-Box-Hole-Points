@@ -71,4 +71,5 @@ for x_coord in np.arange(start_x, end_x, distance_x):
 # print("Coordinates of A:", coordinates_A)
 # print("Coordinates of B:", coordinates_B)
 print(coordinates_A)
-print(len(coordinates_A))
+print(len(coordinates_A)) 
+#
